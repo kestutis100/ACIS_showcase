@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DC1DD261-C1D8-4777-8FDC-779BBD7D829C}</ProjectGuid>
+    <ProjectGuid>{1E3A1B29-004A-48DA-8ECB-89AAC6F1A6E6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ACIS_Showcase</RootNamespace>
-    <AssemblyName>ACIS_Showcase</AssemblyName>
+    <RootNamespace>Dev</RootNamespace>
+    <AssemblyName>Dev</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -41,10 +41,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.DirectoryServices" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.IO.Log" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,6 +55,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ACIS_Showcase\ACIS_Showcase.csproj">
+      <Project>{dc1dd261-c1d8-4777-8fdc-779bbd7d829c}</Project>
+      <Name>ACIS_Showcase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CV\CV.csproj">
       <Project>{24e63cbe-d070-41ec-bc66-f8df454847ec}</Project>
       <Name>CV</Name>
@@ -69,11 +69,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
+    <Content Include="License-LGPL.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="License-LGPL.txt" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\EMGU.CV.3.4.1.2976\build\EMGU.CV.targets" Condition="Exists('..\packages\EMGU.CV.3.4.1.2976\build\EMGU.CV.targets')" />
