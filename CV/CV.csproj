@@ -64,131 +64,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Templates.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Templates.resx</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="License-LGPL.txt" />
-    <None Include="Resources\temp16.jpg" />
-    <None Include="Resources\temp15.jpg" />
-    <None Include="Resources\temp14.jpg" />
-    <None Include="Resources\temp13.jpg" />
-    <None Include="Resources\temp12.jpg" />
-    <None Include="Resources\temp11.jpg" />
-    <None Include="Resources\temp10.jpg" />
-    <None Include="Resources\temp9.jpg" />
-    <None Include="Resources\temp8.jpg" />
-    <None Include="Resources\temp7.jpg" />
-    <None Include="Resources\temp6.jpg" />
-    <None Include="Resources\temp5.jpg" />
-    <None Include="Resources\temp4.jpg" />
-    <None Include="Resources\temp3.jpg" />
-    <None Include="Resources\temp2.jpg" />
-    <None Include="Resources\temp1.jpg" />
-    <None Include="Resources\temp0.jpg" />
-    <None Include="Resources\temp115.jpg" />
-    <None Include="Resources\temp114.jpg" />
-    <None Include="Resources\temp113.jpg" />
-    <None Include="Resources\temp112.jpg" />
-    <None Include="Resources\temp111.jpg" />
-    <None Include="Resources\temp110.jpg" />
-    <None Include="Resources\temp109.jpg" />
-    <None Include="Resources\temp108.jpg" />
-    <None Include="Resources\temp107.jpg" />
-    <None Include="Resources\temp106.jpg" />
-    <None Include="Resources\temp105.jpg" />
-    <None Include="Resources\temp104.jpg" />
-    <None Include="Resources\temp103.jpg" />
-    <None Include="Resources\temp102.jpg" />
-    <None Include="Resources\temp101.jpg" />
-    <None Include="Resources\temp100.jpg" />
-    <None Include="Resources\temp99.jpg" />
-    <None Include="Resources\temp98.jpg" />
-    <None Include="Resources\temp97.jpg" />
-    <None Include="Resources\temp96.jpg" />
-    <None Include="Resources\temp95.jpg" />
-    <None Include="Resources\temp94.jpg" />
-    <None Include="Resources\temp93.jpg" />
-    <None Include="Resources\temp92.jpg" />
-    <None Include="Resources\temp91.jpg" />
-    <None Include="Resources\temp90.jpg" />
-    <None Include="Resources\temp89.jpg" />
-    <None Include="Resources\temp88.jpg" />
-    <None Include="Resources\temp87.jpg" />
-    <None Include="Resources\temp86.jpg" />
-    <None Include="Resources\temp85.jpg" />
-    <None Include="Resources\temp84.jpg" />
-    <None Include="Resources\temp83.jpg" />
-    <None Include="Resources\temp82.jpg" />
-    <None Include="Resources\temp81.jpg" />
-    <None Include="Resources\temp80.jpg" />
-    <None Include="Resources\temp79.jpg" />
-    <None Include="Resources\temp78.jpg" />
-    <None Include="Resources\temp77.jpg" />
-    <None Include="Resources\temp76.jpg" />
-    <None Include="Resources\temp75.jpg" />
-    <None Include="Resources\temp74.jpg" />
-    <None Include="Resources\temp73.jpg" />
-    <None Include="Resources\temp72.jpg" />
-    <None Include="Resources\temp71.jpg" />
-    <None Include="Resources\temp70.jpg" />
-    <None Include="Resources\temp69.jpg" />
-    <None Include="Resources\temp68.jpg" />
-    <None Include="Resources\temp67.jpg" />
-    <None Include="Resources\temp66.jpg" />
-    <None Include="Resources\temp65.jpg" />
-    <None Include="Resources\temp64.jpg" />
-    <None Include="Resources\temp63.jpg" />
-    <None Include="Resources\temp62.jpg" />
-    <None Include="Resources\temp61.jpg" />
-    <None Include="Resources\temp60.jpg" />
-    <None Include="Resources\temp59.jpg" />
-    <None Include="Resources\temp58.jpg" />
-    <None Include="Resources\temp57.jpg" />
-    <None Include="Resources\temp56.jpg" />
-    <None Include="Resources\temp55.jpg" />
-    <None Include="Resources\temp54.jpg" />
-    <None Include="Resources\temp53.jpg" />
-    <None Include="Resources\temp52.jpg" />
-    <None Include="Resources\temp51.jpg" />
-    <None Include="Resources\temp50.jpg" />
-    <None Include="Resources\temp49.jpg" />
-    <None Include="Resources\temp48.jpg" />
-    <None Include="Resources\temp47.jpg" />
-    <None Include="Resources\temp46.jpg" />
-    <None Include="Resources\temp45.jpg" />
-    <None Include="Resources\temp44.jpg" />
-    <None Include="Resources\temp43.jpg" />
-    <None Include="Resources\temp42.jpg" />
-    <None Include="Resources\temp41.jpg" />
-    <None Include="Resources\temp40.jpg" />
-    <None Include="Resources\temp39.jpg" />
-    <None Include="Resources\temp38.jpg" />
-    <None Include="Resources\temp37.jpg" />
-    <None Include="Resources\temp36.jpg" />
-    <None Include="Resources\temp35.jpg" />
-    <None Include="Resources\temp34.jpg" />
-    <None Include="Resources\temp33.jpg" />
-    <None Include="Resources\temp32.jpg" />
-    <None Include="Resources\temp31.jpg" />
-    <None Include="Resources\temp30.jpg" />
-    <None Include="Resources\temp29.jpg" />
-    <None Include="Resources\temp28.jpg" />
-    <None Include="Resources\temp27.jpg" />
-    <None Include="Resources\temp26.jpg" />
-    <None Include="Resources\temp25.jpg" />
-    <None Include="Resources\temp24.jpg" />
-    <None Include="Resources\temp23.jpg" />
-    <None Include="Resources\temp22.jpg" />
-    <None Include="Resources\temp21.jpg" />
-    <None Include="Resources\temp20.jpg" />
-    <None Include="Resources\temp19.jpg" />
-    <None Include="Resources\temp18.jpg" />
-    <None Include="Resources\temp17.jpg" />
     <None Include="Resources\barcode3.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -199,11 +77,6 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Templates.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Templates.Designer.cs</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

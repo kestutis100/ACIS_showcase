@@ -49,7 +49,7 @@ namespace ACIS_Showcase
             string cpu_folder_name;
 
             /* Stitch Image and decode barcode: */
-            var img_list = stitcher.Load_images(SolutionDir.ToString(), Data.Constants.Seg_R, Data.Constants.Seg_R, Data.Constants.filename);
+            var img_list = stitcher.Load_images(SolutionDir.ToString(), Data.Constants.Seg_R, Data.Constants.Seg_R, Data.Constants.filename_top);
             var img = stitcher.Stitch(img_list);
             var barcode = decoder.Barcode_finding_run(img);
 
@@ -57,9 +57,9 @@ namespace ACIS_Showcase
             cpu_folder_name = "ACIS_" + DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss");
             string save_path = SolutionDir.ToString()+"\\"+cpu_folder_name;
             Directory.CreateDirectory(Path.Combine(SolutionDir.ToString(), cpu_folder_name));
-            String fileName = "BarcodeInfo_" + Data.Constants.filename  + ".xml";
+            String fileName = "BarcodeInfo_" + Data.Constants.filename_top  + ".xml";
             new XDocument(new XElement("ACIS", new XElement("barcode", barcode))).Save(Path.Combine(save_path, fileName));
-            img.Save(Path.Combine(save_path, Data.Constants.filename + ".jpg"));
+            img.Save(Path.Combine(save_path, Data.Constants.filename_top + ".jpg"));
        
             /* Defect Detection: */
 

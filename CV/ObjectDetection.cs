@@ -31,33 +31,20 @@ namespace CV
         };
 
         /* Load templates into template list: */
-        public List<Mat> Load_tempaltes(string temp_path, string temp_name, int img_count, int img_count_start)
+        public List<Mat> Load_tempaltes(string SolutionDir)
         {
             List<Mat> templates = new List<Mat>();
+            var temp_path = SolutionDir + Data.Constants.template_file_name + Data.Constants.temp_name;
 
-            for (int i = img_count_start; i < img_count; i++)
+            for (int i = 0; i < Data.Constants.temp_count; i++)
             {
-                var filename = temp_name + i + ".jpg";
-                var temp_to_add = CvInvoke.Imread(temp_path + "/" + filename, ImreadModes.Color);
+                var filename = temp_path + i + ".jpg";
+                var temp_to_add = CvInvoke.Imread(filename, ImreadModes.Color);
                 templates.Add(temp_to_add);
             }
             return templates;
         }
 
-        public void Load(string SolutionDir)
-        {
-            List<Mat> templates = new List<Mat>();
-
-            var file_path = Path.Combine(SolutionDir, Data.Constants.template_file_name);
-            var img = CvInvoke.Imread(file_path, ImreadModes.AnyColor);
-           
-            
-
-            CvInvoke.Imshow("img", img);
-            CvInvoke.WaitKey();
-            CvInvoke.DestroyAllWindows();
-
-        }
 
         /* Match templates to given image, if defects found then return 1, else return 0: */
         public int Match_templates(Mat image, List<Mat> templates)
@@ -95,7 +82,7 @@ namespace CV
                         };
 
                         Rectangle img_box = new Rectangle(max_loc, box_size);
-                        CvInvoke.Rectangle(img, img_box, new MCvScalar(0, 0, 255), 2, LineType.EightConnected, 0);
+                        CvInvoke.Rectangle(img, img_box, new MCvScalar(0, 0, 255), 1, LineType.EightConnected, 0);
                         CvInvoke.Rectangle(res, img_box, new MCvScalar(0, 0, 255), -1, LineType.EightConnected, 0);
                         CvInvoke.Rectangle(img_mask, img_box, new MCvScalar(255, 255, 255), -1, LineType.EightConnected, 0);
                     }

@@ -6,6 +6,8 @@ using CV;
 using ACIS_Showcase;
 using System.IO;
 using System.Security.Policy;
+using Emgu.CV;
+using Emgu.CV.CvEnum;
 
 /* Used for debugging and developing: */
 namespace Dev
@@ -31,17 +33,22 @@ namespace Dev
             // Create appdomain
             AppDomain domain = AppDomain.CreateDomain("Domain2", adEvidence, domaininfo);
 
-            SolutionDir = domain.BaseDirectory + "\\..\\..\\..\\CV";
+            SolutionDir = domain.BaseDirectory + "\\..\\..\\..\\Images\\";
 
             return domain;
         }
 
         static void Main(string[] args)
         {
+            var templates = new List<Mat>();
             AppDomain domain = Startup();
             ObjectDetection detector = new ObjectDetection();
-            detector.Load(SolutionDir.ToString());
+            var img_path = Path.Combine(SolutionDir.ToString(), Data.Constants.filename_bot + ".jpg");
 
+            var img = CvInvoke.Imread(img_path, ImreadModes.AnyColor);
+            templates = detector.Load_tempaltes(SolutionDir.ToString());
+            detector.Init_detection(0.96);
+            detector.Match_templates(img, templates);
         }
     }
 }
